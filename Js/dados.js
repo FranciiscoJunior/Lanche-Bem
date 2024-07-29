@@ -320,7 +320,7 @@ var MENU = {
 
         {
             "id": "004",
-            "img": "/img/cardapio/Sobremesa/PUDIM DE FAVA DE BAUNILHA INDIVIDUAL (150G).avif",,
+            "img": "/img/cardapio/Sobremesa/PUDIM DE FAVA DE BAUNILHA INDIVIDUAL (150G).avif",
             "name": "PUDIM DE FAVA DE BAUNILHA INDIVIDUAL (150G)",
             "desc": "",
             "price": 17,90
@@ -393,99 +393,99 @@ var MENU = {
 
     "pizza": [
         {
-            "id":
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "001",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL FIRENZE.avif",
+            "name": "PIZZA TRADICIONAL FIRENZE",
+            "desc": "Acompanha Aquele Palmito Saboroso, Presunto Suculento e o Legítimo Catupiry Irresistível.",
+            "price": 58,90
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "002",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL JARDINEIRA I I.avif",
+            "name": "PIZZA TRADICIONAL JARDINEIRA II",
+            "desc": "",
+            "price": 58,99
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "003",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL MÔNACO.avif",
+            "name": "PIZZA TRADICIONAL MÔNACO",
+            "desc": "Acompanha Aquela Muçarela Cremosa, Calabresa Saborosa, Ervilha e Ovos.",
+            "price": 59,99
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "004",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL VITÓRIA.avif",
+            "name": "PIZZA TRADICIONAL VITÓRIA",
+            "desc": "Acompanha Aquela Calabresa Saborosa, Muçarela Cremosa, Pimentão e Cebola Fresca.",
+            "price": 49,99
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "005",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL TOSCANA.avif",
+            "name": "PIZZA TRADICIONAL TOSCANA",
+            "desc": "Acompanha Aquela Calabresa Saborosa, Muçarela Cremosa ou Legitimo Catupiry Irresistível.",
+            "price": 58,70
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "006",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL DE MARGUERITA.avif",
+            "name": "PIZZA TRADICIONAL DE MARGUERITA",
+            "desc": "Acompanha Aquela Muçarela Cremosa, Rodelas de Tomate, Parmesão Irresistível e Manjericão Fresco.",
+            "price": 58,90
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "007",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL DE FRANGO.avif",
+            "name": "PIZZA TRADICIONAL DE FRANGO",
+            "desc": "Acompanha Aquele Frango Suculento com Legitimo Catupiry Irresistível ou Muçarela Cremosa.",
+            "price": 57,99
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "008",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL DE MILHO.avif",
+            "name": "PIZZA TRADICIONAL DE MILHO",
+            "desc": "Acompanha Aquele Milho, Muçarela Cremosa ou Legitimo Catupiry Irresistível.",
+            "price": 57,00
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "009",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL DE NAPOLITANA.avif",
+            "name": "PIZZA TRADICIONAL DE NAPOLITANA",
+            "desc": "Acompanha Aquela Muçarela Cremosa, Rodelas de Tomate Fresco e Parmesão Suculento.",
+            "price": 57,00
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "010",
+            "img": "/img/cardapio/Pizzas/PIZZA TRADICIONAL DE PORTUGUESA.avif",
+            "name": "PIZZA TRADICIONAL DE PORTUGUESA",
+            "desc": "Acompanha Aquele Presunto Saboroso, Muçarela Cremosa, Ovos, Cebola e Ervilha.",
+            "price": 58,99
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "011",
+            "img": "/img/cardapio/Pizzas/PIZZA DOCE DE BANANA I.avif",
+            "name": "PIZZA DOCE DE BANANA I",
+            "desc": "Acompanha Aquela Banana Fatiada Saborosa, Muçarela Cremosa, Canela e Leite Condensado Super Cremoso.",
+            "price": 57,00
         },
 
         {
-            "id": 
-            "img":
-            "name":
-            "desc":
-            "price":
+            "id": "012",
+            "img": "/img/cardapio/Pizzas/PIZZA DOCE DE LEGITIMA NUTELLA.avif",
+            "name": "PIZZA DOCE DE LEGITIMA NUTELLA",
+            "desc": "Acompanha Aquela Legitima Nutella Irresistível, Banana Fatiada e Castanha do Pará Trufada Saborosa.",
+            "price": 59,99
         },
     ]
 }

@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lanche bem</title>
+    <title>Lanche bem - Cardápio online</title>
 
-    <link rel="stylesheet" href="./Css/style.css">
-    <link rel="stylesheet" href="./Css/animate.css">
     <link rel="stylesheet" href="./Css/bootstrap.min.css">
     <link rel="stylesheet" href="./Css/fontawesome.css">
+    <link rel="stylesheet" href="./Css/animate.css">
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/responsivo.css">
 </head>
 
 <body>
+    <!--div class="container-mensagens" id="container-mensagens"></div>-->
+
+    <!--<a class="botao-carrinho animated bounceIn hidden" onclick="cardapio.metodos.abrirCarrinho(true)">
+        <div class="badge-total-carrinho">0</div>
+        <i class="fa fa-shopping-bag"></i>
+    </a>-->
+
     <section class="header">
         <div class="container">
             <nav class="navbar navbar-expand-lg pl-0 pr-0 col-one">
                 <a clas="navbar-brand wow fadeIn" href="#">
-                    <img src="./img/Logo.png" width="140" class="img-logo" />
+                    <img src="./img/Logo.png" width="110" class="img-logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
                     <span class="navbar-toggler-icon">
@@ -29,14 +38,323 @@
                         <li class="nav-item"><a href="#cardapio" class="nav-link"><b>Cardápio</b></a></li>
                         <li class="nav-item"><a href="#depoimentos" class="nav-link"><b>Depoimentos</b></a></li>
                     </ul>
+
+                    <a class="btn btn-white btn-icon wow fadeIn" onclick="cardapio.metodos.abrirCarrinho(true)">
+                        Meu carrinho <span class="icon">
+                            <div class="container-total-carrinho badge-total-carrinho hidden">0</div>
+                            <i class="fa fa-shopping-bag"></i>
+                        </span>
+                    </a>
                 </div>
             </nav>
         </div>
     </section>
 
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one">
+                    <div class="d-flex text-banner">
+                        <h1 class="wow fadeInleft"><b>Faça sua escolha & <b class="color-primary"> Delicie-se</b></h1>
+                        <p class="wow fadeInLeft delay-02s">
+                            Nosso cardápio possui uma ampla variedade, que agrada o paladar, e um atendimento delivery eficiente e seguro.
+                        </p>
+
+                        <div class="wow fadeIn delay-05s">
+                            <a class="btn btn-yellow mt-4 mr-3">
+                                Ver cardápio
+                            </a>
+
+                            <a href="" class="btn btn-white btn-icon-left mt-4" id="btnLigar"> 
+                                <span class="icon-left">
+                                    <i class="fa fa-phone"></i>
+                                </span>
+
+                                (84) 99134-7327
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/juniiormedeiros/" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeIn delay-05s">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100073220302825" target="_blank" class="btn btn-sm btn-white btn-social mt-4 mr-3 wow fadeIn delay-05s">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/5584991834727" target="_blank" class="btn btn-sm btn-white btn-social mt-4 wow fadeIn delay-05s">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <div class="col-6 no-mobile">
+                    <div class="card-baner wow fadeIn delay-03s"></div>
+                    <div class="d-flex img-banner wow fadeIn delay-05s">
+                        <img src="./img/Principal.png" width="600" height="456"/>
+                    </div>
+
+                    <div class="card card-case wow fadeInRight delay-07s">
+                        "Excelente atendimento, entrega rápida
+                        <br>funcionários prestativos e educados, comida de<br>
+                        excelente qualidade, e cardápio variado."
+
+                        <span class="card-case-name">
+                            <b>Francisco Júnior</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicos" id="servicos">
+
+        <div class="background-servicos"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-one text-center mb-5 wow fadeIn">
+                    <span class="hint-title"><b>Conheça nossos serviços</b></span>
+                    <h1 class="title">
+                        <b>Solicite seu pedido e receba com segurança</b>
+                    </h1>
+                </div>
     
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5 wow fadeInUp">
+                    <div class="card-icon text-center">
+                        <img src="./img/celular.png" width="150" />
+                    </div>
+                    <div class="card-text text-center mt-3">
+                        <p><b>Faça seu pedido</b></p>
+                        <span>
+                            Com poucos clicks peça sua comida através do nosso cardápio... 
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5 wow fadeInUp">
+                    <div class="card-icon text-center">
+                        <img src="./img/entrega.png" width="150">
+                    </div>
+                    <div class="card-text text-center mt-3">
+                        <p><b>Entrega via delivery</b></p>
+
+                        <span>
+                            Entrega rápida e segura, com qualidade e éficiência...
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 col-md-4 col-sm-12 col-one mb-5 wow fadeInUp">
+                    <div class="card-icon text-center">
+                        <img src="./img/prato.png" width="150">
+                    </div>
+
+                    <div class="card-text text-center mt-3">
+                        <p><b>Qualidade incomparável</b></p>
+
+                        <span>
+                            A éficiência também está na qualidade do nossos itens...
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cardapio itens-center" id="cardapio">
+        <div class="background-cardapio"></div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-one text-center mb-5 wow fadeInUp">
+                    <span class="hint-title"><b>Nosso cardápio</b></span>
+                    <h1 class="title">
+                        <b>Conheça os itens do nosso cardápio e faça seu pedido</b>
+                    </h1>
+                </div>
+
+                <div class="col-12 col-one container-menu wow fadeInUp">
+                    <a id="menu-acai" class="btn btn-white btn-sm mr-3 active" onclick="cardapio.metodos.obterItensCardapio('acai')">
+                        <i class="fas fa-hamburger">&nbsp; Açai</i>
+                    </a>
+                    <a id="menu-bebidas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('bebidas')">
+                        <i class="fas fa-cocktail"></i> &nbsp; Bebidas
+                    </a>
+                    <a id="menu-sobremesas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('sobremesas')">
+                        <i class="fas fa-ice-cream"></i> &nbsp; Sobremesas
+                    </a>
+                    <a id="menu-pizzas" class="btn btn-white btn-sm mr-3" onclick="cardapio.metodos.obterItensCardapio('pizzas')">
+                        <i class="fas fa-pizza-slice"></i> &nbsp; Pizzas
+                    </a>
+                </div>
+
+                <div class="col-12 col-one">
+                    <div class="row" id="itensCardapio"></div>
+                </div>
+
+                <div class="col-12 col-one text-center wow fadeInUp">
+                    <a id="btnMostrarMais" class="btn btn-white btn-sm" onclick="cardapio.metodos.mostrarMais('')">
+                        Mostrar Mais
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="depoimentos">
+
+        <div class="background-depoimentos"></div>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-lg-7 col-sm-12 col-one">
+                    <span class="hint-title wow fadeIn"><b>Avaliação dos serviços oferecidos</b></span>
+                    <h1 class="title wow fadeIn">
+                        <b>Veja como é a avaliação dos nossos serviços pelos clientes</b>
+                    </h1>
+
+                    <div class="mb-5">
+                        <div class="depoimento animated fadeIn" id="depoimento-1">
+                            <div class="container-dados-depoimento">
+                                <div class="imagem-depoimento"></div>
+                                <div>
+                                    <p class="nome-depoimento"><b>Hebert Salviano</b></p>
+                                    <p class="nome-depoimento">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>&nbsp; <span>5.0</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="texto-depoimento">
+                                <i class="fas fa-quote-left"></i>
+
+                                <span>
+                                    Excelente atendimento, entrega rápida 
+                                    funcionários prestativos e educados, comida de 
+                                    excelente qualidade, e cardápio variado.
+                                </span>
+                                <i class="fas fa-quote-right"></i>
+                            </p>
+                        </div>
+
+                        <div class="depoimento animated fadeIn hidden" id="depoimento-2">
+                            <div class="container-dados-depoimento">
+                                <div class="imagem-depoimento"></div>
+                                <div>
+                                    <p class="nome-depoimento"><b>Alef Richard</b></p>
+
+                                    <p class="nota-depoimento">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>&nbsp; <span>4.5</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="texto-depoimento">
+                                <i class="fas fa-quote-left"></i>
+                                <span>
+                                    Um jantar perfeito do começo ao fim. Comida, experiência, serviço...
+                                    foi tão maravilhoso que fomos dois dias seguidos - fato inédito para mim em uma viagem.
+                                </span>
+                                <i class="fas fa-quote-right"></i>
+                            </p>
+                        </div>
+
+                        <div class="depoimento animated fadeIn hidden" id="depoimento-3">
+                            <div class="container-dados-depoimento">
+                                <div class="imagem-depoimento"></div>
+                                <div>
+                                    <p class="nome-depoimento"><b>Lorrayne Louyze</b></p>
+                                    <p class="nota-depoimento">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>&nbsp; <span>4.0</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="texto-depoimento">
+                                <i class="fas fa-quote-left"></i>
+                                <span>
+                                    A comida estava excelente e o serviço gentil nos surpreendeu!
+                                        Dica: reserve umas 3 horas para ter uma experiência incrível.
+                                </span>
+
+                                <i class="fas fa-quote-right"></i>
+                            </p>
+                        </div>
+
+                        <div class="depoimeto animatedet fadeIn hidden" id="depoimento-4">
+                            <div class="container-dados-depoimento">
+                                <div class="imagem-depoimento"></div>
+
+                                <div>
+                                    <p class="nome-depoimento"><b>Samara Lopes</b></p>
+                                    <p class="nota-depoimento">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>&nbsp; <span>3.5</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="texto-depoimento">
+                                <i class="fas fa-quote-left"></i>
+                                <span>
+                                    Comida excelente e atendimento de ótima qualidade, ambiente bem organizado com funcionários,
+                                    competentes e atenciosos.
+                                </span>
+                                <i class="fas fa-quote-right"></i>
+                            </p>
+                        </div>
+                    </div>
+
+                    <a id="btnDepoimento-1" class="btn btn-sm btn-white btn-social wow fadeIn mr-3 active" onclick="cardapio.metodos.abrirDepoimento(1)">1</a>
+                    <a id="btnDepoimento-2" class="btn btn-sm btn-white btn-social wow fadeIn mr-3" onclick="cardapio.metodos.abrirDepoimento(2)">2</a>
+                    <a id="btnDepoimento-3" class="btn btn-sm btn-white btn-social wow fadeIn mr-3" onclick="cardapio.metodos.abrirDepoimento(3)">3</a>
+                    <a id="btnDepoimento-4" class="btn btn-sm btn-white btn-social wow fadeIn" onclick="cardapio.metodos.abrirDepoimento(4)">4</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one container-texto-footer wow fadeIn">
+                    <p class="mb-0">
+                        <b>Lanche bem</b> Desenvolvido por Francisco Júnior - &copy; 2024- todos os direitos reservados - (84) 99134-7327 - v 0.0.1
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-3 col-md-3 col-sm-12 col-one container-redes-footer wow fadeIn">
+                    <a href="" target="_blank" class="btn btn-sm btn-white btn-social mr-3">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" target="_blank" class="btn btn-sm btn-white btn-social mr-3">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" target="_blank" class="btn btn-sm btn-white btn-social">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./Js/script.js"></script>
+    <script src="./Js/dados.js"></script>
     <script src="./Js/bootstrap.min.js"></script>
     <script src="./Js/jquery-1.12.4.min.js"></script>
     <script src="./Js/modernizr-3.5.0.min.js"></script>
