@@ -7,6 +7,9 @@ var cardapio = {};
 var MEU_CARRINHO = [];
 var MEU_ENDERECO = null;
 
+var VALOR_CARRINHO = 0;
+var VALOR_ENTREGA = 5.0;
+
 var CELULAR_EMPRESA = '5584991347327';
 
 cardapio.eventos = {
@@ -474,5 +477,46 @@ cardapio.metodos = {
         }
     },
 
-    
+    //CARREGANDO BOTÃO DE LIGAÇÃO
+    carregarBotaoLigar: () => {
+
+        $("#btnLigar").attr('href', `tel:${CELULAR_EMPRESA}`);
+    },
+
+    //Abrindo seção de depoimentos 
+    abrirDepoimento: (depoimento) => {
+
+        $("#depoimento-1").addClass('hidden');
+        $("#depoimento-2").addClass('hidden');
+        $("#depoimento-3").addClass('hidden');
+        $("#depoimento-4").addClass('hidden');
+
+        $("#btnDepoimento-1").removeClass('active');
+        $("#btnDepoimento-2").removeClass('active');
+        $("#btnDepoimento-3").removeClass('active');
+        $("#btnDepoimento-4").removeClass('active');
+
+        $("#depoimento-" + depoimento).removeClass('hidden');
+        $("#btnDepoimento-" + depoimento).addClass('active')
+    },
+
+    //Mensagens 
+    mensagem: (texto, cor = 'red', tempo = 3500) => {
+
+        let id = Math.floor(Date.now() * Math.random()).toString();
+
+        let msg = `<div id="msg-${id} " class="animeted fadeInDown toast ${cor}">${texto}</div>`;
+
+        $("#container-mensagens").append(msg);
+
+        setTimeout(() => {
+
+            $("#msg-" + id).removeClass('fadeInDown');
+            $("#msg" + id).addClass('fadeOutUp');
+
+            setTimeout(() => {
+                $("#msg-" + id).remove();
+            }, 800);
+        }, tempo)
+    }
 }
