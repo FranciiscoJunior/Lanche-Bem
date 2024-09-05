@@ -519,4 +519,67 @@ cardapio.metodos = {
             }, 800);
         }, tempo)
     }
+
+}
+
+cardapio.templates = {
+
+    item: `
+    <div class="col-12 col-lg-3 col-md-3 col-sm-6 mb-5 animated fadeInUp">
+        <div class="card card-item" id="\${id}">
+            <div class="img-produto">
+                <img src="\${img}" />
+            </div>
+            <p class="title-produto text-center mt-4">
+                <b>\${nome}</b>
+            </p>
+            <p class="price-produto text-center">
+                <b>R$ \${preco}</b>
+            </p>
+            <div class"add-carrinho">
+                <span class"btn-menos" onclick="cardapio.metodos.diminuirQuantidade('\${id}')"><i class="fas fa-minus"></i></span>
+                <span class="btn-numero-itens" id="qntd-\${id}">0</span>
+                <span class="btn-mais" onclick="cardapio.metodos.aumentarQuntidade('\${id}')><i class="fas fa-plus"></i></span>
+                <span class="btn btn-add" onclick="cardapio.metodos.adicionarAoCarrinho('\${id}')><i class="fa fa-shopping-bag></i></span>
+            </div>
+        </div>
+    </div>
+    `,
+
+    itemCarrinho: `
+        <div class="col-12 item-carrinho">
+            <div class="img-produto">
+                <img src="\${img} />
+            </div>
+            <div class="dados-produto">
+                <p class="title-produto"><b>\${nome}</b></p>
+                <p class="price-produto"><b>R$ \${preco}</b></p>
+            </div>
+            <div class"add-carrinho">
+                <span class="btn-menos" onclick="cardapio.metodos.diminuirQuantidadeCarrinho('\${id}')"><i class="fas fa-minus"></i></span>
+                <span class"add-numero-itens" id"qntd-carrinho-\${id}">\${qntd}</span>
+                <span class="btn-mais" onclick="cardapio.metodos.aumentarQuantidadeCarrinho('\${id}')"><i class="fas fa-plus"></i></span>
+                <span class="btn btn-remove no-mobile" onclick="cardapio.metodos.removeItemCarrinho('\${id}')"><i class="fa fa-times"></i></span>
+            </div>
+        </div>
+    `,
+
+    itemResumo: `
+        <div class="col-12 item-carrinho resumo">
+            <div class="img-produto-resumo>
+                <img src="\${img}" />
+            </div>
+            <div class="dados-produto">
+                <p class="title-produto-resumo">
+                    <b>\${nome}</b>
+                </p>
+                <p class="price-produto-resumo">
+                    <b>R$ \${preco}</b>
+                </p>
+            </div>
+            <p class="quantidade-produto-resumo">
+                x <b>\$ {qntd}</b>
+            </p>
+        </div>
+    `
 }
