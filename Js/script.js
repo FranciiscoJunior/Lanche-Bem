@@ -23,12 +23,12 @@ cardapio.eventos = {
 cardapio.metodos = {
 
     //Obtendo listas de itens incluidas no cardápio
-    obterItensCardapio: (categoria = 'burgers', mostrarMais = false) => {
+    obterItensCardapio: (categoria = 'burgers', mostrarmais = false) => {
 
         var filtro = MENU[categoria];
         console.log(filtro);
 
-        if (!mostrarMais) {
+        if (!mostrarmais) {
             $("#itensCardapio").html('');
             $("#btnMostrarMais").removerClass('hidden')
         }
@@ -41,12 +41,12 @@ cardapio.metodos = {
             .replace(/\${id}/g, e.id)
 
             //Botão mostrar mais foi clicado (12 itens)
-            if (mostrarMais && i >= 8 && i < 12){
+            if (mostrarmais && i >= 8 && i < 12){
                 $("#itensCardapio").append(temp)
             }
 
             //Paginação inicial com (8 itens)
-            if (!mostrarMais && i < 8){
+            if (!mostrarmais && i < 8){
                 $("#itensCardapio").append(temp)
             }
         })
@@ -59,22 +59,29 @@ cardapio.metodos = {
     },
 
     //Clique no botaão mostrar mais
-    mostrarMais: () =>{
+    mostrarMais: () => {
         var ativo = $ (".container.menu a.active").attr('id').split('menu-')[1];
         cardapio.metodos.obterItensCardapio(ativo, true);
 
-        $("#btnmostrarMais").addClass('hidden');
+        $("#btnMostrarMais").addClass('hidden');
     },
 
 
     //Diminuir a quantidade de item no cardápio
     diminuirQuantidade: (id) => {
 
-        let qntdAtual = parseInt(("#qntd-" + id).toExponential());
+        let qntdAtual = parseInt($("#qntd-" + id).text());
 
         if (qntdAtual > 0) {
-            $("#qntd-" + id).text(qntdAtual + 1);
+            $("#qntd-" + id).text(qntdAtual - 1);
         }
+    },
+
+    //Aumentando a quantidade de item no cardápio
+    aumentarQuantidade: (id) => {
+
+        let qntd = parseInt($("#qntd-" + id).text());
+        $("#qntd-" + id).text(qntdAtual + 1)
     },
 
     //Adicionar itens do cardápio, ao carrinho
@@ -88,10 +95,10 @@ cardapio.metodos = {
             var categoria = $(".container-menu a.active").attr('id').split('menu-')[1];
 
             //Obtendo lista de itens
-            let filtro =MENU[categoria];
+            let filtro = MENU[categoria];
 
             //Obtem o item
-            let item = $.grep(filtro, (e, i) => {return e.id ==});
+            let item = $.grep(filtro, (e, i) => {return e.id == id});
 
             if (item.length > 0) {
 
@@ -137,7 +144,7 @@ cardapio.metodos = {
     //Abrir modal de carrinho
     abrirCarrinho: (abrir) => {
 
-        if (abrie) {
+        if (abrir) {
             $("#modalCarrinho").removeClass('hidden');
             cardapio.metodos.carregarCarrinho();
         }
@@ -151,7 +158,7 @@ cardapio.metodos = {
     carregarEtapa: (etapa) => {
 
         if (etapa == 1) {
-            $("#lblTituloEtapa").text('Seu carrinho: ');
+            $("#lblTituloEtapa").text('Seu carrinho:');
             $("#itensCarrinho").removerClass('hidden');
             $("#localEntrega").addClass('hidden');
             $("#resumoCarrinho").addClass('hidden');
@@ -232,7 +239,6 @@ cardapio.metodos = {
                 }
             })
         }
-
         else {
             $("#itensCarrinho").html('<p class="carrinho-vazio"><i class="fa fa-shopping-bag"></i> Seu carrinho está vazio.</p>')
             cardapio.metodos.carregarValores();
@@ -263,7 +269,7 @@ cardapio.metodos = {
     },
 
     //Botão removendo itens do carrinho
-    remoberItemCarrinho: (id) => {
+    removerItemCarrinho: (id) => {
 
         MEU_CARRINHO = $.grep(MEU_CARRINHO, (e, i) => { return e.id != id});
         cardapio.metodos.carregarCarrinho();
@@ -279,7 +285,7 @@ cardapio.metodos = {
         MEU_CARRINHO[objIndex].qntd = qntd;
 
         //Atualizando o botão carrinho com a quantidade atualizada
-        cardapio.metodos.atualizarBadjeTotal();
+        cardapio.metodos.atualizarBadgeTotal();
 
         //Atualizando os valores (R$) totais do carrinho
         cardapio.metodos.carregarValores();
@@ -321,7 +327,7 @@ cardapio.metodos = {
     buscarCep: () => {
 
         //Criando uma variavel com o valor do CEP
-        var cep = $ ("#txtCEP").val().trim().replace(/\D/g, '');
+        var cep = $("#txtCEP").val().trim().replace(/\D/g, '');
 
         //Verificando se o Cep possui valor, informado
         if (cep != ""){
@@ -446,6 +452,8 @@ cardapio.metodos = {
 
     //Atualizando link do botão whatsapp
     fianalizarPedido: () => {
+
+        //PAREI AQUI
 
         if (MEU_CARRINHO.length > 0 && MEU_ENDERECO != null){
 

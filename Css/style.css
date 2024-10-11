@@ -54,7 +54,7 @@ a.navbar-brand {
     background-color: var(--color-white);
     color: var(--color-black)!important;
     border-radius: 20px;
-    padding: 15px 35px;
+    padding: 15px 25px;
     font-size: 20px;
     box-shadow: 0px 20px 25px -10px rgba(0,0,0,0.1);
 }
@@ -71,7 +71,7 @@ a.navbar-brand {
     display: inline-block;
     color: var(--color-black);
     background-color: var(--color-primary);
-    width: 45px;
+    width: 55px;
     height: 45px;
     position: absolute;
     right: 10px;
@@ -89,7 +89,7 @@ a.navbar-brand {
 .text-banner {
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
 }
 
 .text-banner h1 {
@@ -135,15 +135,15 @@ a.navbar-brand {
     position: absolute;
     height: 450px;
     width: 450px;
-    border-radius: 170px;
-    top: -30px;
+    border-radius: 220px;
+    top: 30px;
 }
 
 .card {
     border-radius: 20px;
-    padding: 15px 20px;
+    padding: 15px 25px;
     font-size: 20px;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1)!important;
+    box-shadow: 0px 10px 55px -3px rgba(0,0,0,0.1)!important;
     border: none!important;
 }
 
@@ -164,7 +164,8 @@ a.navbar-brand {
 }
 
 .servicos {
-    padding: 100px;
+    padding: 110px;
+    padding-top: 350px;
     padding-bottom: 150px;
 }
 
@@ -183,7 +184,7 @@ a.navbar-brand {
 }
 
 .card-icon {
-    height: 150px;
+    height: 250px;
     margin: 0 auto;
     margin-bottom: 30px;
     display: flex;
@@ -297,11 +298,20 @@ a.navbar-brand {
     color: var(--color-black-heavy)!important;
     margin-top: 20px;
 }
-
 .depoimentos {
     padding-top: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 150px;
     align-items: center;
+}
+
+/*PAREI AQUI*/
+.depoimentos .mb-5{
+    width: 650px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    align-content: end;
+    align-items: start;
 }
 
 .background-depoimentos {
@@ -311,20 +321,11 @@ a.navbar-brand {
     height: 500px;
 }
 
-.card-depoimentos {
-    height: 390px;
-    width: 390px;
-    border-radius: 120px;
-    background-color: var(--color-secondary);
-    position: absolute;
-    left: 0;
-}
-
 .container-dados-depoimentos {
     display: flex;
 }
 
-.depoimento {
+.depoimentos {
     margin-top: 70px;
 }
 
@@ -369,7 +370,7 @@ a.navbar-brand {
 .container-texto-footer, .container-redes-footer {
     display: flex;
     align-items: end;
-    }
+}
 
 footer {
     background-color: var(--color-secondary);
@@ -466,6 +467,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid var(--color-separate);
 }
 
@@ -523,10 +525,6 @@ footer {
 }
 
 .color-total .texto-entrega {
-    color: var(--color-separate);
-}
-
-.container-total .texto-entrega {
     color: var(--color-separate);
 }
 
@@ -609,6 +607,11 @@ select.form-control {
 }
 
 .texto-endereco {
+    margin-bottom: 0;
+    color: var(--color-black);
+}
+
+.cidade-endereco {
     margin-bottom: 0;
 }
 
