@@ -60,6 +60,7 @@ cardapio.metodos = {
 
     //Clique no botaão mostrar mais
     mostrarMais: () => {
+
         var ativo = $ (".container.menu a.active").attr('id').split('menu-')[1];
         cardapio.metodos.obterItensCardapio(ativo, true);
 
@@ -119,13 +120,13 @@ cardapio.metodos = {
                 cardapio.metodos.mensagem('Item adicionado ao carrinho', 'green')
                 $("#qntd-" + id).text(0);
 
-                cardapio.metodos.atualizarBadjeTotal();
+                cardapio.metodos.atualizarBadgeTotal();
             }
         }
     },
 
     //atualiza o badge de total de botões "Meu carrinho";
-    atualizarBadjeTotal: () => {
+    atualizarBadgeTotal: () => {
 
         var total = 0;
 
@@ -135,6 +136,11 @@ cardapio.metodos = {
 
         if (total > 0) {
             $(".botao-carrinho").removeClass('hidden');
+            $(".container-total-carrinho").addClass('hidden');
+        }
+
+        else {
+            $(".botao-carrinho").addClass('hidden');
             $(".container-total-carrinho").addClass('hidden');
         }
 
